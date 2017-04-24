@@ -64,11 +64,11 @@ public class InsertionSort {
 	public static void up() {
 		for(int i=1;i<length;i++){
 			int a=ints[i];
-			for(int j=i-1;j<i&&j>=0;j--){
-				if(ints[j]>ints[j+1]){
+			for(int j=i-1;j>=0&&ints[j]>a;j--){
+//				if(ints[j]>ints[j+1]){
 					ints[j+1]=ints[j];
 					ints[j]=a;
-				}
+//				}
 			}
 		}
 		System.out.println("升序后的数组为："+Arrays.toString(ints));
@@ -77,13 +77,19 @@ public class InsertionSort {
 	public static void down() {
 		for(int i=1;i<length;i++){
 			int a=ints[i];
-			for(int j=i-1;j<i&&j>=0;j--){
-				if(ints[j]<ints[j+1]){
+			for(int j=i-1;j>=0&&ints[j]<a;j--){
+//				if(ints[j]<ints[j+1]){
 					ints[j+1]=ints[j];
 					ints[j]=a;
-				}
+//				}
 			}
 		}
 		System.out.println("降序后的数组为："+Arrays.toString(ints));
+	}
+	
+	public static void binaryInsert(){
+		for(int i=1;i<length;i++){
+			
+		}
 	}
 }
